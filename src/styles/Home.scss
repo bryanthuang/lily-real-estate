@@ -1,0 +1,39 @@
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .left-pane {
+    width: 50vw;
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#333333;
+    color: white;
+    font-size: 20px;
+    a {
+      color: white;
+    }
+    .icon-list {
+      display:flex;
+      justify-content: space-around;
+      margin-top: 25px;
+      svg {
+        padding: 0 10px;
+      }
+    }
+    .compass-logo {
+      height: 25px;
+      margin-top: 25px;      
+    }
+
+  }
+  .right-pane {
+    width: 50vw;
+    height: calc(100vh - 64px);
+    background-image: url('../assets/temp.jpg');
+    background-size: cover;
+  }
+}
