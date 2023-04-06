@@ -3,7 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
   .left-pane {
+    @media only screen and (max-width: 600px) {
+      width: 100vw;
+    }
     width: 50vw;
     height: calc(100vh - 64px);
     display: flex;
@@ -31,6 +37,9 @@
 
   }
   .right-pane {
+    @media only screen and (max-width: 600px) {
+      width: 100vw;
+    }
     width: 50vw;
     height: calc(100vh - 64px);
     background-image: url('../assets/temp.jpg');
