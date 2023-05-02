@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      {/* include in main website push <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />

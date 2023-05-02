@@ -4,16 +4,11 @@ function About() {
   return (
     <div className="About">
         <h1>COMING SOON</h1>
-        <p>As a native San Franciscan with a deep love for the Bay Area and its residents, I am passionate about helping my clients find their dream home. With a focus on residential real estate, I am committed to supporting and empowering my clients to make informed decisions that better their lives.</p>
+        <p>A native San Franciscan with a deep love for the Bay Area, I extend this passion when guiding clients to find a home that best compliments their lifestyle. I am committed to educating and empowering my clients along the journey to make decisions that move their life forward.</p>
 
-        <p>What sets me apart as a realtor is my experience in home renovations. With my keen eye for design and my knowledge of the local real estate market, I can help you see the potential in a property and guide you on making smart renovation decisions that add value to your investment. Whether you're looking to buy a fixer-upper, sell a home that needs a little TLC, or renovate your new home to suit your lifestyle, I'm here to provide the guidance and expertise you need.</p>
+        <p>What sets me apart as a Realtor are my years of experience in home renovations. I’ve helped clients through small scale bathrooms and kitchen renovations to building a new home from the ground up. With a keen eye for interiors and my initimate knowledge of the local real estate market, I help clients see the potential for value add in a property and when applicable, guide clients through renovation decisions that add tremendous value and promises a high return on investment.</p>
 
-        <p>My devotion to my clients stems from a deep empathy and astute listening skills, as well as an intimate market knowledge that allows me to craft personalized, winning strategies for every client. As your trusted advisor, I'm committed to ensuring that you have all the information and resources you need to make informed decisions and achieve your real estate goals. With my dedication, expertise, and passion for the Bay Area and its residents, I'm confident that I can help you find the perfect home and make it your own.</p>
-        {/* <ul class=icon-list>
-            <li class=icon><a class=linkedin href=https://www.linkedin.com/in/lily-lai-03382a87 target="_blank"></a></li>
-            <li class=icon><a class=facebook href=https://www.instagram.com/lily_lai__ target="_blank"></a></li>
-            <li class=icon><a class=instagram href=https://www.instagram.com/lily_lai__ target="_blank"></a></li> 
-        </ul> */}
+        <p>Wearing the hat of an advisor and advocate, I equip my clients with all the information and resources they need to achieve their real estate goals. With my unwavering dedication, expertise, and passion for my work, I'm confident I can help you reach your real estate goals that will move your life forward.</p>
     </div>
   );
 }

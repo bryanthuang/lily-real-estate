@@ -78,7 +78,7 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
+                  <Typography textAlign="center"><Link to={`${page.link}`}>{page.name}</Link></Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -99,7 +99,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            Lily Lai Real Estate
+            <Link to='/'>Lily Lai Real Estate</Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
