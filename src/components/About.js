@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 function About() {
 
   return (
-    <div className="About">
+    <div className="about">
         <h1>COMING SOON</h1>
         <p>A native San Franciscan with a deep love for the Bay Area, I extend this passion when guiding clients to find a home that best compliments their lifestyle. I am committed to educating and empowering my clients along the journey to make decisions that move their life forward.</p>
 
