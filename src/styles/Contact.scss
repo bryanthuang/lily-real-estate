@@ -1,0 +1,15 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .title {
+    padding: 1.5em 0;
+  }
+  @include m.mobile {
+    height: unset;
+  }
+}

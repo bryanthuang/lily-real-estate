@@ -1,0 +1,64 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.about {
+  .title {
+    text-align: center;
+    margin: 1.5em 0;
+  }
+  .about-text {
+    font-family: v.$neue;
+    font-size:16px;
+    letter-spacing: 2px;    
+    .image {
+      float: left;
+      margin-right: 2em;
+      @include m.mobile {
+        float: unset;
+        margin: 1.5em auto;
+      }
+    }
+    p {
+      line-height: 2em;
+    }
+    h1 {
+      font-family: v.$iskry;
+    }
+    .video {
+      height: 55vh;
+      @include m.mobile {
+        height: 30vh;
+      }
+      margin-bottom: 5em;
+    }
+  }
+  .affiliations {
+    padding: 1em 0 !important;
+    @media only screen and (min-width: 992px) {
+      .ui.grid>.row>[class*="two wide computer"].column {
+        width: 16.5%!important;
+      } 
+    }
+    .affiliation-logos {
+      padding: 2em 0 !important;
+      @include m.mobile {
+        .column {
+          margin: 2em 0 !important;
+        }
+      }
+    }
+    h1 {
+      font-family: v.$iskry;
+      letter-spacing: 2px;
+    }
+    li {
+      font-size: 16px;
+      letter-spacing: 2px;
+      font-family: v.$neue;
+      line-height: 2em;
+      @include m.mobile {
+        margin: 0 1em;
+      }
+    }
+  }
+}

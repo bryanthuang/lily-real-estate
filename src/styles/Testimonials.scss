@@ -1,0 +1,67 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.testimonials {
+  margin-bottom: 5em;
+  h1 {
+    font-family: v.$iskry;
+  }
+  .title {
+    text-align: center;
+    padding: 1.5em 0;
+    
+  }
+  .testimonial-grid {
+    width: 80vw;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 180px);
+    gap: 2rem;
+    grid-auto-rows: minmax(10px, auto);
+  }
+  .testimonial {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 1px v.$gray;
+    position: relative;
+    p, b{
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+    @include m.mobile {
+      p,b {
+        font-size: 16px;
+      }
+    }
+    .name {
+      position:absolute;
+      bottom: 10px;
+      right: 20px;
+    }
+  }
+  .testimonial > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+  }
+  @media (min-width: 768px) {
+    .testimonial-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .testimonial:first-of-type {
+      grid-column: span 2;
+    }
+
+    .testimonial:nth-of-type(7) {
+      grid-column: span 2;
+    }
+  }
+  @include m.mobile {
+    .testimonial-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
