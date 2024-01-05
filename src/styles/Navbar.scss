@@ -6,7 +6,21 @@ body {
   font-family: v.$neue;
   background-color: #fcfcfc;
 }
-
+.contact-info {
+  top: 1.5em;
+  position: absolute;
+  right: 12em;
+  font-size: 16px;
+  span {
+    -webkit-text-stroke: 1px #eee;
+    color: #eee;
+    margin-right: 1em;
+    letter-spacing: 2px;
+  }
+  i {
+    color: white;
+  }
+}
 .container {
   max-width: 80vw;
   margin: 0 auto;
@@ -67,6 +81,12 @@ body {
   // background-size: cover;
   // height: 100vh;
 }
+
+.header-privacypolicy {
+  background: url('../assets/testimonial.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 50vh;
+}
 video {
   width: 100vw;
   height: 100vh;
@@ -119,12 +139,10 @@ video {
   text-decoration: none;
   font-family: v.$neue;
   color: white;
+  -webkit-text-stroke: 1px white;
   text-decoration: none;
   font-size: 18px;
   letter-spacing: 2px;
-    &:hover {
-        color: v.$black;
-    }
 }
 
 

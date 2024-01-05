@@ -14,6 +14,8 @@ import Properties from './components/Properties';
 import Blog from './components/Blog';
 import Communities from './components/Communities';
 import Footer from './components/Footer';
+import PrivacyPolicy from './components/PrivacyPolicy';
+
 import 'semantic-ui-css/semantic.min.css';
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
         <Route path="blog" element={<Blog />} />
         <Route path="neighborhoods" element={<Neighborhoods />} />
         <Route path="communities" element={<Communities />} />
+        <Route path="privacypolicy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </div>

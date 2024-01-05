@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Neue Montreal Light";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: "Neue Montreal Light";
 }

@@ -6,6 +6,7 @@ import '../styles/Navbar.scss';
 import hamburger from '../assets/hamburger.svg';
 import close from '../assets/close.svg';
 import video from '../assets/home7.mp4';
+import { Icon, Divider} from "semantic-ui-react";
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
@@ -51,6 +52,10 @@ const Navbar = () => {
               <NavLink to="/contact" onClick={handleShowNavbar} className='link-underline'>Contact</NavLink>
             </li>
           </ul>
+        </div>
+        <div className='contact-info'>
+          <Icon name='phone'/><span>415.728.2623 </span>
+          <Icon name='mail'/><span>lily@lilylaisf.com</span>
         </div>
       </div>
       {/* <div className="tagline">

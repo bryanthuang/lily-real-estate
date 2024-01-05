@@ -1,0 +1,17 @@
+@use 'variables' as v;
+
+.privacy-policy {
+  letter-spacing: 2px;
+  padding-bottom: 4em;
+
+  h1 {
+    text-align: center;
+    padding: 1.5em 0;
+  }
+  p {
+    font-size: 18px;
+  }
+  h2 {
+    font-family: v.$iskry;
+  }
+}

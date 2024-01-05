@@ -38,6 +38,7 @@ function About() {
 
           <p>I am committed, dedicated, and enthusiastic when working with clients who are ready to transition into the next stage of life. I am confident I will bring a positive impact to this life-changing process. </p>
 
+          <p><b>Languages:</b> English, Chinese(中文 - 廣東話/普通話)</p>
         </Container>
 
         
@@ -54,22 +55,22 @@ function About() {
         <Grid className='affiliation-logos' centered>
           <Grid.Row centered  verticalAlign='middle'>
             <Grid.Column mobile={8} tablet={4} computer={2} textAlign='justified'>
-              <Image src={car} size='small' centered/>
+              <Image alt='car' src={car} size='small' centered/>
             </Grid.Column>
             <Grid.Column mobile={8} tablet={4} computer={2}>
-              <Image src={sfar} size='small' centered/>
+              <Image alt='sfar' src={sfar} size='small' centered/>
             </Grid.Column>
             <Grid.Column mobile={8} tablet={4} computer={2}>
-              <Image src={wcr} size='small' centered/>
+              <Image alt='wcr' src={wcr} size='small' centered/>
             </Grid.Column>
             <Grid.Column mobile={8} tablet={4} computer={2}>
-              <Image src={nar} size='tiny' centered/>
+              <Image alt='nar' as=''src={nar} size='tiny' centered/>
             </Grid.Column>
             <Grid.Column mobile={8} tablet={4} computer={2}>
               <Image src={green} size='small' centered/>
             </Grid.Column>
             <Grid.Column mobile={8} tablet={4} computer={2}>
-              <Image src={rs} size='small' centered/>
+              <Image alt='rs' src={rs} size='small' centered/>
             </Grid.Column>
           </Grid.Row>
         </Grid>
