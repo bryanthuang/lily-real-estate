@@ -112,5 +112,4 @@ export const testimonials = [
     name: 'Lisa A.',
     content: "<p>Lily was fabulous to work with during our home buying process! She was so helpful to help us understand the market and our budget in the east bay. She worked tirelessly with us for many months as we navigated the process. She was very proactive in getting information about potential homes, touring, and putting together offers. In the end we found a perfect house for our needs and we are incredibly happy. <b>She helped us prioritize what we wanted in a home and the final purchase is truly ideal.</b> I highly recommend Lily for a realtor :)</p>"
   },
-  
 ]

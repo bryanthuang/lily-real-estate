@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Image, Grid, Dropdown, Button } from "semantic-ui-react";
 
 import emailjs from "@emailjs/browser";
@@ -15,6 +15,25 @@ function ContactForm() {
   const [emailSent, setEmailSent] = useState(false);
   const [emailSending, setEmailSending] = useState(false);
   const form = useRef();
+
+  function FadeInSection(props) {
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+    useEffect(() => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+    }, []);
+    return (
+      <div
+        className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+        ref={domRef}
+      >
+        {props.children}
+      </div>
+    );
+  }
 
   const sendEmail = (e) => {
     setEmailSending(true);
@@ -95,7 +114,7 @@ function ContactForm() {
           Fill out the form below and I will get back to you shortly.{" "}
         </div>
         <form ref={form} onSubmit={sendEmail} className="form-fields">
-          <label>First Name </label>
+          <label>First Name</label>
           <input
             type="text"
             name="first_name"
@@ -103,8 +122,7 @@ function ContactForm() {
             required
           />
           <label>Last Name</label>
-          <input type="text" name="last_name" required placeholder="Last Name"
-/>
+          <input type="text" name="last_name" required placeholder="Last Name"/>
           <label>Email Address</label>
           <input type="email" name="email" required placeholder="Email"/>
           <label>Phone Number</label>

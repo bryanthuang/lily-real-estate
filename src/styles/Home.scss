@@ -9,6 +9,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    background-color: v.$offwhite;
     .contact-button {
       font-family: v.$brandon;
     }
@@ -17,26 +18,6 @@
         width: unset !important;
       }
     }
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn ease-in 2;
-      animation-fill-mode: forwards;
-      animation-duration: 3s;
-    }
-    
-  }
-  .fade-in-section {
-    opacity: 0;
-    transform: translateY(20vh);
-    visibility: hidden;
-    transition: opacity 1200ms ease-out, transform 600ms ease-out,
-    visibility 1200ms ease-out;
-    will-change: opacity, transform, visibility;
-  }
-  .fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
   }
   .about {
     height: 60vh;

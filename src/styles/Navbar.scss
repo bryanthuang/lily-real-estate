@@ -8,7 +8,7 @@ body {
   background-color: #fcfcfc;
 }
 .contact-info {
-  top: 1.5em;
+  top: 2em;
   position: absolute;
   right: 12em;
   font-size: 16px;
@@ -70,10 +70,10 @@ body {
   height: 100vh;
 }
 .header-contact {
-  background: url('../assets/contact.jpg') no-repeat center center fixed;
+  background: url('../assets/contact3.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 60vh;
-  background-position-y: -20vh;
+  background-position-y: -60vh;
 }
 .header-testimonials {
   background: url('../assets/testimonial.jpg') no-repeat center center fixed;
@@ -120,17 +120,14 @@ video {
 }
 
 .nav-elements ul {
-  // display: flex;
-  // justify-content: space-between;
+
   list-style-type: none;
   text-align: right;
   margin: 0;
-  padding: 50px 0;
+  padding: 6em 0;
 }
 
 .nav-elements ul li {
-  // display: flex;
-  // justify-content: space-between;
   float: none;
   display: inline-block;
 }
