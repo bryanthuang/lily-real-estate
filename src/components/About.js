@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useEffect, useRef } from 'react';
 import { Grid, Container, Header, Image } from 'semantic-ui-react';
 import ReactPlayer from 'react-player/lazy';
+import FadeInSection from '../components/FadeInSection';
 import lily from '../assets/Lily01.jpg'
 import car from '../assets/car.png';
 import nar from '../assets/nar.png';
@@ -14,26 +15,6 @@ function About() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   });
-
-  function FadeInSection(props) {
-    const [isVisible, setVisible] = useState(false);
-    const domRef = useRef();
-    useEffect(() => {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => setVisible(entry.isIntersecting));
-      });
-      observer.observe(domRef.current);
-    }, []);
-    return (
-      <div
-        className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-        ref={domRef}
-      >
-        {props.children}
-      </div>
-    );
-  }
-
   return (
     <div className="about">
       <h1 className='title'>About Me</h1>

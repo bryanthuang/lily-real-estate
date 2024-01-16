@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/Home.scss';
-import { Button, Container, Grid, Image, Header, Icon } from 'semantic-ui-react';
+import { Container, Grid, Image, Icon } from 'semantic-ui-react';
 import ContactModal from './ContactModal';
+import FadeInSection from '../components/FadeInSection';
 import image from '../assets/RGB_LilyPhoto.jpg';
 // import contactHome from '../assets/contact-home.jpg'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -10,24 +11,6 @@ import { Carousel } from 'react-responsive-carousel';
 import arches from '../assets/arches.png'
 function Home() {
   const [isOpen, setIsOpen] = useState(false)
-  function FadeInSection(props) {
-    const [isVisible, setVisible] = useState(false);
-    const domRef = useRef();
-    useEffect(() => {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => setVisible(entry.isIntersecting));
-      });
-      observer.observe(domRef.current);
-    }, []);
-    return (
-      <div
-        className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-        ref={domRef}
-      >
-        {props.children}
-      </div>
-    );
-  }
   return (
     <div className='home'>
       {/* section CTA */}

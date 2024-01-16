@@ -38,10 +38,10 @@ const Footer = () => {
             <a href='https://bit.ly/433qBRc' target='_blank' rel='noreferrer'>
               <img alt='instagram' src='https://img.icons8.com/sf-ultralight/100/instagram-new.png'/>
             </a>
-            <a href='https://bit.ly/3BQ1dm3' target='_blank' rel='noreferrer'>
+            <a href='https://bit.ly/3MokJuE' target='_blank' rel='noreferrer'>
               <img alt='facebook' src='https://img.icons8.com/sf-ultralight/100/facebook.png'/>
             </a>
-            <a href='https://bit.ly/3MokJuE' target='_blank' rel='noreferrer'>
+            <a href='https://bit.ly/3BQ1dm3' target='_blank' rel='noreferrer'>
               <img alt='linkedin' src='https://img.icons8.com/sf-ultralight/100/linkedin.png'/>
             </a>
 

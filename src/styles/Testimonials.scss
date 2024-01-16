@@ -13,22 +13,22 @@
   }
   .testimonial-grid {
     width: 80vw;
-    max-width: 100%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 180px);
-    gap: 2rem;
-    grid-auto-rows: minmax(10px, auto);
   }
   .testimonial {
     background-color: #fff;
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: 0 0 1px v.$gray;
+    box-shadow: 0 0 3px v.$black;
     position: relative;
+    text-align: center;
     p, b{
       font-size: 18px;
       letter-spacing: 2px;
+    }
+    b {
+      -webkit-text-stroke: 1px v.$gray;
+
     }
     @include m.mobile {
       p,b {

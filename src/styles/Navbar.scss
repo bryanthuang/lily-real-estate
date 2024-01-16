@@ -80,11 +80,6 @@ body {
   background-size: cover;
   height: 50vh;
 }
-.header- {
-  // background: url('../assets/home.jpg') no-repeat center center fixed;
-  // background-size: cover;
-  // height: 100vh;
-}
 
 .header-privacypolicy {
   background: url('../assets/testimonial.jpg') no-repeat center center fixed;
@@ -180,11 +175,6 @@ video {
   }
 }
 @media (max-width: 600px) {
-  .header- {
-    background: url('../assets/interior.jpg') no-repeat center center fixed; //change to different 
-    background-size: cover;
-    height: 100vh;
-  }
   .menu-icon {
     display: block;
     cursor: pointer;
