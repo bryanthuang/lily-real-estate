@@ -2,6 +2,7 @@ import { BrowserRouter, NavLink, Link, Route, useLocation } from "react-router-d
 import {isMobile} from 'react-device-detect';
 import React, {Fragment, useState} from 'react';
 import logo from '../assets/RGB_LilyLaiLogo_White.png';
+import logoBlack from '../assets/RGB_LilyLaiLogo_Black.png'
 import '../styles/Navbar.scss';
 import hamburger from '../assets/hamburger.svg';
 import close from '../assets/close.svg';
@@ -21,9 +22,16 @@ const Navbar = () => {
     <nav className={`navbar header-${location}`}>
       {location === '' && <video src={video} autoPlay muted loop></video>}
       <div className="logo">
-        <NavLink to='/'>
-          <img src={logo} className='logo-image' alt="logo" />
-        </NavLink>
+        {location !== 'about' && 
+          <NavLink to='/'>
+            <img src={logo} className='logo-image' alt="logo" />
+          </NavLink>
+        }
+        {location === 'about' && 
+          <NavLink to='/'>
+            <img src={logoBlack} className='logo-image' alt="logo" />
+          </NavLink>
+        }
       </div>
       <div className="container">
         <div className="menu-icon" onClick={handleShowNavbar}>
@@ -58,9 +66,11 @@ const Navbar = () => {
           <Icon name='mail'/><span>lily@lilylaisf.com</span>
         </div>
       </div>
+      <div className="tagline">
+        {location === '' && 'Your Success as Our Compass'}
+      </div>
       {/* <div className="tagline">
         {location === 'testimonials' && 'Testimonials'}
-        {location === '' && 'This is my tagline'}
         {location === 'contact' && 'Contact Me'}
       </div> */}
     </nav>

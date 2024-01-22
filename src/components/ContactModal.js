@@ -10,7 +10,7 @@ function ContactModal({isOpen, setIsOpen}) {
       onOpen={() => setIsOpen(true)}
       open={isOpen}
       closeIcon
-      trigger={<Button basic size='huge' onClick={() => setIsOpen(!isOpen)}>30 Minute Consultation</Button>}
+      trigger={<Button size='massive' onClick={() => setIsOpen(!isOpen)}>30 Minute Consultation</Button>}
     >
       <Modal.Header>
         <h1>Consultation</h1>

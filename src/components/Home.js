@@ -8,37 +8,111 @@ import image from '../assets/RGB_LilyPhoto.jpg';
 // import contactHome from '../assets/contact-home.jpg'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import arches from '../assets/arches.png'
+import SF from '../assets/SF.png'
+import SSF from '../assets/SSF.png'
+import Pacifica from '../assets/Pacifica.png'
+import Penninsula from '../assets/Penninsula.png'
+import CountUp from 'react-countup';
+
 function Home() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <div className='home'>
       {/* section CTA */}
       <div className='cta'>
-        <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
-        <Image src={arches} className='arches' size='huge' verticalAlign='bottom'/>
+        <div className='background'>
+        </div>
+        <div className='text'>
+          <h2>
+            We’re Curious To Hear Your Story
+          </h2>
+          <p className='subtext'>
+            Let’s schedule a time to connect, to see how we can play a part. 
+          </p>
+          <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
 
       </div>
       {/* section About Me */}
-      <Grid className='about'>
-        <Grid.Column computer={4} mobile={12} tablet={4} verticalAlign='middle'>
-          <FadeInSection>
-            <Image src={image} className='about-image' circular/>
-          </FadeInSection>
-        </Grid.Column>
-        <Grid.Column computer={6} mobile={12} tablet={6} verticalAlign='middle'>
-          <FadeInSection>
-            <Container className='about-text'>
-              <p>
-                I am a passionate Bay Area Realtor with expertise in home renovations, empowering clients with winning personalized strategies created from intimate market knowledge.
-              </p>
-            <NavLink className='about-link link-underline' to="/about">More About Me→</NavLink>
-            </Container>
-          </FadeInSection>
+      <div>
+        <Grid className='about'>
+          <Grid.Column computer={4} mobile={12} tablet={4} verticalAlign='middle'>
+            <FadeInSection>
+              <Image src={image} className='about-image' circular/>
+            </FadeInSection>
+          </Grid.Column>
+          <Grid.Column computer={6} mobile={12} tablet={6} verticalAlign='middle'>
+            <FadeInSection>
+              <Container className='about-text'>
+                <p>
+                  I am a passionate Bay Area Realtor with expertise in home renovations, empowering clients with winning personalized strategies created from intimate market knowledge.
+                </p>
+              <NavLink className='about-link link-underline' to="/about">More About Me→</NavLink>
+              </Container>
+            </FadeInSection>
 
-        </Grid.Column>
-      </Grid>
+          </Grid.Column>
+        </Grid>
+        </div>
       {/* section Testimonials */}
+      <div className='stats'>
+        <div className='stat'>
+          <CountUp
+            enableScrollSpy
+            start={0}
+            end={60}
+            prefix="$"
+            suffix="M +"
+            duration='3'
+          >
+          </CountUp>
+          <p>Sold To Date</p>
+        </div>
+        <div className='stat'>
+          <CountUp
+            enableScrollSpy
+            start={0}
+            end={10}
+            prefix="Top "
+            suffix="%"
+            duration='3'
+          >
+          </CountUp>
+          <p>Of Agents in San Francisco</p>
+        </div>
+        <div className='stat'>
+          <CountUp
+            enableScrollSpy
+            start={0}
+            end={60}
+            prefix=""
+            suffix=" +"
+            duration='3'
+          >
+          </CountUp>
+          <p>Clients Helped</p>
+        </div>
+      </div>
+      <div className='areas'>
+        <div className='title'>
+          Areas Serviced
+        </div>
+        <div className='arches'>
+          <FadeInSection>
+            <Image src={SF} className='icon' size='small' verticalAlign='bottom'/>
+          </FadeInSection>
+          <FadeInSection>
+            <Image src={SSF} className='icon' size='small' verticalAlign='bottom'/>
+          </FadeInSection>
+          <FadeInSection>
+            <Image src={Pacifica} className='icon' size='small' verticalAlign='bottom'/>
+          </FadeInSection>
+          <FadeInSection>
+            <Image src={Penninsula} className='icon' size='small' verticalAlign='bottom'/>
+          </FadeInSection>
+        </div>
+      </div>
+      
       <div className='testimonials'>
         <FadeInSection>
 

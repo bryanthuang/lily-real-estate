@@ -1,8 +1,9 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 .footer {
   height: 40vh;
-  background-color: aliceblue;
+  background-color: #EFEAE1;
   margin-top: 0 !important;
   @media (max-width: 768px) {
     height: 100vh;
@@ -74,6 +75,11 @@
     p, a {
       font-size: 14px;
       letter-spacing: 2px;
+    }
+    @include m.mobile {
+      p, a {
+        font-size: 10px;
+      }
     }
     .image {
       margin: 0 5px;

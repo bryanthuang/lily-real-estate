@@ -4,27 +4,53 @@
 .home {
   .cta {
     width: 100vw;
-    height: 40vh;
+    height: 75vh;
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: v.$offwhite;
+  // background-position-y: -43vh;
+    .background {
+      width: 100vw;
+      height: 100%;
+      background-color: v.$oatmeal;
+      background: url('../assets/test2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      filter: contrast(.5)
+    }
     .contact-button {
       font-family: v.$brandon;
     }
-    .arches {
-      @include m.mobile {
-        width: unset !important;
-      }
+    .subtext {
+      font-size: 18px;
+      letter-spacing: 2px;
+      -webkit-text-stroke: 1px v.$black;
+
     }
+    .text-box {
+      background-color: white;
+      padding:10px;
+    }
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction:column;
+      background-color: rgba(249,243,232, .3);
+      padding: 3em;
+      position: absolute;
+    }
+  }
+  .cta * {
+    opacity: 1;
   }
   .about {
     height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: v.$oatmeal;
+    background-color: v.$offwhite;
+
     @include m.mobile {
       height: 100vh;
       flex-direction: column !important;
@@ -55,6 +81,73 @@
         line-height: 24px;
       }
     }
+  }
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+    background-color:v.$sage;
+    .stat {
+      font-size: 28px;
+      text-align: center;
+      p, span {
+        font-family: v.$iskry;
+      }
+    }
+  }
+  .areas {
+    height: 45vh;
+    background-color: v.$sage;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include m.mobile {
+      height: 60vh;
+    }
+    .arches {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 4em;
+      @include m.mobile {
+        flex-wrap: wrap;
+        margin-top: unset;
+      }
+    }
+    .title {
+      font-size: 38px;
+      font-family: v.$iskry;
+      margin-bottom: 30px;
+      @include m.mobile {
+        font-size: 30px;
+      }
+    }
+    .icon {
+      margin: 0 4em;
+      @include m.mobile {
+        padding: 3em 0;
+      }
+    }
+    img {
+      @include m.mobile {
+        width: 100px !important;
+      }
+    }
+  }
+  .fade-in-section:nth-child(1) {
+    transition-delay: 150ms;
+  }
+  .fade-in-section:nth-child(2) {
+    transition-delay: 300ms;
+  }
+  .fade-in-section:nth-child(3) {
+    transition-delay: 450ms;
+  }
+  .fade-in-section:nth-child(4) {
+    transition-delay: 600ms;
   }
   .testimonials {
     height: 60vh;

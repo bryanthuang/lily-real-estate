@@ -47,7 +47,8 @@ body {
   background: url('../assets/about.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 60vh;
-  background-position-y: -50vh;
+  background-position-y: -35vh;
+  
 }
 .header-blog {
   background: url('../assets/interior.jpg') no-repeat center center fixed;
@@ -70,21 +71,22 @@ body {
   height: 100vh;
 }
 .header-contact {
-  background: url('../assets/contact3.jpg') no-repeat center center fixed;
+  background: url('../assets/contact.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 60vh;
-  background-position-y: -60vh;
+  background-position-y: -35vh;
 }
 .header-testimonials {
-  background: url('../assets/testimonial.jpg') no-repeat center center fixed;
+  background: url('../assets/testimonials.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 50vh;
+  height: 60vh;
+  background-position-y: -22vh;
 }
 
 .header-privacypolicy {
-  background: url('../assets/testimonial.jpg') no-repeat center center fixed;
+  background: url('../assets/testimonials.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 50vh;
+  height: 60vh;
 }
 video {
   width: 100vw;
@@ -141,7 +143,21 @@ video {
   letter-spacing: 2px;
 }
 
-
+.header-about {
+  .nav-elements ul a {
+    color: v.$black;
+    -webkit-text-stroke: 1px v.$black;
+  }
+  .contact-info {
+    span {
+      -webkit-text-stroke: 1px v.$black;
+      color: v.$black;
+    }
+    i {
+      color: v.$black;
+    }
+  }
+}
 .nav-elements ul li:nth-child(1),
 .nav-elements ul li:nth-child(2),
 .nav-elements ul li:nth-child(3) {
@@ -216,5 +232,9 @@ video {
   .tagline {
     transform: translateX(6%);
     font-size: 38px;
+    @include m.mobile {
+      font-size: 30px;
+      top: 40%;
+    }
   }
 }
