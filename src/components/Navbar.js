@@ -6,7 +6,6 @@ import logoBlack from '../assets/RGB_LilyLaiLogo_Black.png'
 import '../styles/Navbar.scss';
 import hamburger from '../assets/hamburger.svg';
 import close from '../assets/close.svg';
-import video from '../assets/home7.mp4';
 import { Icon, Divider} from "semantic-ui-react";
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -20,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar header-${location}`}>
-      {location === '' && <video src={video} autoPlay muted loop></video>}
+      {location === '' && <video src='https://res.cloudinary.com/dlaituqwq/video/upload/f_auto:video,q_auto/nyqditwg1sqyqollk3if' autoPlay muted loop></video>}
       <div className="logo">
         {location !== 'about' && 
           <NavLink to='/'>
@@ -66,7 +65,7 @@ const Navbar = () => {
           <Icon name='mail'/><span>lily@lilylaisf.com</span>
         </div>
       </div>
-      <div className="tagline">
+      <div className='tagline'>
         {location === '' && 'Your Success as Our Compass'}
       </div>
       {/* <div className="tagline">

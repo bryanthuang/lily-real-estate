@@ -17,7 +17,9 @@ const Footer = () => {
               <img src={logo} className='logo-image' alt='logo' />
             </Grid.Row>
             <Grid.Row>
-              <img className='compass-logo' src={compass} alt='compass-logo'></img>
+              <a href='https://www.compass.com/agents/lily-lai/' target='_blank' rel='noreferrer'>
+                <img className='compass-logo' src={compass} alt='compass-logo'></img>
+              </a>
             </Grid.Row>
           </Grid.Column>
           <Grid.Column className='contact' padded computer={6} mobile={16} tablet={4}>

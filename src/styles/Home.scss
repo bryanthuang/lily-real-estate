@@ -14,7 +14,7 @@
       width: 100vw;
       height: 100%;
       background-color: v.$oatmeal;
-      background: url('../assets/test2.jpg') no-repeat center center fixed;
+      background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/wr8plprsi0qxxs3lhmxr') no-repeat center center fixed;
       background-size: cover;
       filter: contrast(.5)
     }
@@ -36,7 +36,7 @@
       justify-content: center;
       align-items: center;
       flex-direction:column;
-      background-color: rgba(249,243,232, .3);
+      background-color: rgba(250, 249, 246, .4);
       padding: 3em;
       position: absolute;
     }
@@ -88,7 +88,7 @@
     justify-content: space-around;
     align-items: center;
     height: 20vh;
-    background-color:v.$sage;
+    background-color:v.$white;
     .stat {
       font-size: 28px;
       text-align: center;

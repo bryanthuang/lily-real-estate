@@ -63,7 +63,7 @@ function Home() {
             end={60}
             prefix="$"
             suffix="M +"
-            duration='3'
+            duration='2'
           >
           </CountUp>
           <p>Sold To Date</p>
@@ -75,7 +75,7 @@ function Home() {
             end={10}
             prefix="Top "
             suffix="%"
-            duration='3'
+            duration='2'
           >
           </CountUp>
           <p>Of Agents in San Francisco</p>
@@ -87,7 +87,7 @@ function Home() {
             end={60}
             prefix=""
             suffix=" +"
-            duration='3'
+            duration='2'
           >
           </CountUp>
           <p>Clients Helped</p>

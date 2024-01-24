@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { pdfjs, Document, Page } from 'react-pdf';
-import pdf from '../assets/SF-MonthlyReport.pdf';
 function MarketUpdates() {
   const [numPages, setNumPages] = useState();
   const [pageNumber, setPageNumber] = useState();
@@ -14,12 +13,6 @@ function MarketUpdates() {
 
   return (
     <div className="marketUpdates">
-      <Document file="./SF-MonthlyReports.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
     </div>
   );
 }

@@ -22,7 +22,7 @@ function Testimonials() {
             <FadeInSection>
               <article className='testimonial'>
                 {parse(testimonial.content)}
-                <b className='name'>- {testimonial.name}</b>
+                <b className='name'>- {testimonial.name} -</b>
               </article>
             </FadeInSection>
           )}

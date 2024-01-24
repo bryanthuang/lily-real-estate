@@ -44,49 +44,50 @@ body {
   text-align: center;
 }
 .header-about {
-  background: url('../assets/about.jpg') no-repeat center center fixed;
+  background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/xmctef45wz3wwv1bxvwb') no-repeat center center fixed;
   background-size: cover;
   height: 60vh;
   background-position-y: -35vh;
   
 }
 .header-blog {
-  background: url('../assets/interior.jpg') no-repeat center center fixed;
+  // background: url('../assets/interior.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
 }
 .header-market-updates {
-  background: url('../assets/interior.jpg') no-repeat center center fixed;
+  // background: url('../assets/interior.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
 }
 .header-buyers {
-  background: url('../assets/interior.jpg') no-repeat center center fixed;
+  // background: url('../assets/interior.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
 }
 .header-sellers {
-  background: url('../assets/interior.jpg') no-repeat center center fixed;
+  // background: url('../assets/interior.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
 }
 .header-contact {
-  background: url('../assets/contact.jpg') no-repeat center center fixed;
+  background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/rmbwaqpk3oqsvxjybjsc') no-repeat center center fixed;
   background-size: cover;
   height: 60vh;
   background-position-y: -35vh;
 }
 .header-testimonials {
-  background: url('../assets/testimonials.jpg') no-repeat center center fixed;
+  background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/a2du5a8knn9k8uqo8jom') no-repeat center center fixed;
   background-size: cover;
   height: 60vh;
   background-position-y: -22vh;
 }
 
 .header-privacypolicy {
-  background: url('../assets/testimonials.jpg') no-repeat center center fixed;
+  background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/ooouydebfkjipni36ycd') no-repeat center center fixed;
   background-size: cover;
   height: 60vh;
+  background-position-y: -48vh;
 }
 video {
   width: 100vw;
@@ -232,9 +233,11 @@ video {
   .tagline {
     transform: translateX(6%);
     font-size: 38px;
+    font-family: v.$iskry !important;
     @include m.mobile {
       font-size: 30px;
       top: 40%;
+      line-height: 1em;
     }
   }
 }
