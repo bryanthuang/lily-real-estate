@@ -4,12 +4,18 @@ import parse from 'html-react-parser';
 import { testimonials } from '../constants/constants';
 import '../styles/Testimonials.scss';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-
+import { Helmet } from 'react-helmet-async';
 function Testimonials() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   });
   return (
+    <>
+    <Helmet>
+      <title>Lily Lai Real Estate</title>
+      <meta name='description' content='Explore client success stories with Lily Lai SF. Realize dreams, find homes, and experience exceptional service through our heartfelt testimonials.' />
+      <link rel='canonical' href='/testimonials' />
+    </Helmet>
     <div className="testimonials">
       <h1 className='title'>Testimonials</h1>
       {/* <div className='testimonial-grid'> */}
@@ -30,6 +36,7 @@ function Testimonials() {
       </ResponsiveMasonry>
       {/* </div> */}
     </div>
+    </>
   );
 }
 

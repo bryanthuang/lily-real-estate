@@ -1,4 +1,4 @@
-import { BrowserRouter, NavLink, Link, Route, useLocation } from "react-router-dom";
+import {  NavLink, useLocation } from "react-router-dom";
 import {isMobile} from 'react-device-detect';
 import React, {Fragment, useState} from 'react';
 import logo from '../assets/RGB_LilyLaiLogo_White.png';
@@ -6,7 +6,7 @@ import logoBlack from '../assets/RGB_LilyLaiLogo_Black.png'
 import '../styles/Navbar.scss';
 import hamburger from '../assets/hamburger.svg';
 import close from '../assets/close.svg';
-import { Icon, Divider} from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
 import {useLockBodyScroll, useToggle} from 'react-use';
 
 const Navbar = () => {
@@ -26,18 +26,18 @@ const Navbar = () => {
       <div className="logo">
         {location !== 'about' && 
           <NavLink to='/'>
-            <img src={logo} className='logo-image' alt="logo" />
+            <img loading='eager' src={logo} title='logo' className='logo-image' alt="logo" />
           </NavLink>
         }
         {location === 'about' && 
           <NavLink to='/'>
-            <img src={logoBlack} className='logo-image' alt="logo" />
+            <img loading='eager' src={logoBlack} title='logo' className='logo-image' alt="logo" />
           </NavLink>
         }
       </div>
       <div className="container">
         <div className="menu-icon" onClick={handleShowNavbar}>
-          <img src={!showNavbar ? hamburger : close } className='hamburger' alt="logo" />
+          <img loading='eager' title='hamburger-menu' alt='hamburger-menu' src={!showNavbar ? hamburger : close } className='hamburger' />
         </div>
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul>
@@ -80,61 +80,3 @@ const Navbar = () => {
 };
 
 export default Navbar
-// import * as React from 'react';
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
-// import IconButton from '@mui/material/IconButton';
-// import Typography from '@mui/material/Typography';
-// import Menu from '@mui/material/Menu';
-// import MenuIcon from '@mui/icons-material/Menu';
-// import Container from '@mui/material/Container';
-// import MenuItem from '@mui/material/MenuItem';
-// import { Link } from 'react-router-dom'
-// import {pages} from '../constants/constants'
-// import { useLocation } from 'react-router-dom';
-
-// import '../styles/Navbar.scss'
-// function Navbar() {
-
-  // const path = useLocation().pathname;
-  // const location = path.split("/")[1];
-//   console.log(location)
-
-//   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-//   const handleOpenNavMenu = (event) => {
-//     setAnchorElNav(event.currentTarget);
-//   };
- 
-//   const handleCloseNavMenu = () => {
-//     setAnchorElNav(null);
-//   };
-
-//   return (
-//     <AppBar position="static" color="transparent" className={` navbar header-${location}`}>
-//       <Toolbar disableGutters>
-//         <div className="left-nav">
-//           {pages.left.map((page) => (
-//             <MenuItem key={page.name} onClick={handleCloseNavMenu} style={{ backgroundColor: 'transparent' }}>
-//               <Typography textAlign="center"><Link to={`${page.link}`} className='menu-item'>{page.name}</Link></Typography>
-//             </MenuItem>
-//           ))}
-//         </div>
-//       <Link to='/'>
-//           <img src={logo} className='logo' alt="logo" />
-//         </Link>
-//         <div className="right-nav">
-//           {pages.right.map((page) => (
-//             <MenuItem key={page.name} onClick={handleCloseNavMenu} style={{ backgroundColor: 'transparent' }}>
-//               <Typography textAlign="center"><Link to={`${page.link}`} className='menu-item'>{page.name}</Link></Typography>
-//             </MenuItem>
-//           ))}
-//         </div>
-//       </Toolbar>
-      
-      
-//     </AppBar>
-//   );
-// }
-// export default Navbar;
