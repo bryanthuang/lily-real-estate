@@ -249,7 +249,7 @@ video {
     font-size: 50px !important;
     font-family: v.$iskry !important;
     @include m.mobile {
-      font-size: 30px;
+      font-size: 30px !important;
       top: 40%;
       line-height: 1em;
     }

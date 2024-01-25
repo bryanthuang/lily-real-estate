@@ -54,7 +54,8 @@ const Footer = () => {
             <Image loading='eager' title='eho' alt='eho' src={eho} size='mini' wrapped/>
           </div>
           <div>
-            <p>Copyright © 2024 Lily Lai Real Estate | All Rights Reserved  | <NavLink to='/privacypolicy'>Privacy Policy</NavLink></p>
+            <p>Copyright © 2024 Lily Lai Real Estate</p>
+            <p>All Rights Reserved  | <NavLink to='/privacypolicy'>Privacy Policy</NavLink></p>
           </div>
         </div>
       </Grid>

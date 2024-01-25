@@ -2,14 +2,15 @@
 @use 'mixins' as m;
 
 .contact {
-  height: 100vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 1.5em !important;
   .title {
-    padding: 1.5em 0;
+    margin: 1.5em 0 !important;
   }
   @include m.mobile {
-    height: unset;
+    // height: unset;
   }
 }
