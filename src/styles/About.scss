@@ -60,6 +60,12 @@
         margin: 0 1em;
       }
     }
+    .logo {
+      @include m.mobile {
+        margin-left: unset !important;
+        margin-right: unset !important;
+      }
+    }
   }
   .about-text, .affiliations, .affiliation-column {
 

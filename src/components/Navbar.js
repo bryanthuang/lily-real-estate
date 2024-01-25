@@ -7,14 +7,17 @@ import '../styles/Navbar.scss';
 import hamburger from '../assets/hamburger.svg';
 import close from '../assets/close.svg';
 import { Icon, Divider} from "semantic-ui-react";
+import {useLockBodyScroll, useToggle} from 'react-use';
+
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
-
-
+  const [locked, setLocked] = useToggle(false)
+  useLockBodyScroll(locked)
   const path = useLocation().pathname;
   const location = path.split("/")[1].toLowerCase();
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
+    isMobile ? setLocked(!locked) : setLocked(false)
   };
 
   return (

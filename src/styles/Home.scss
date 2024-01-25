@@ -16,7 +16,7 @@
       background-color: v.$oatmeal;
       background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/wr8plprsi0qxxs3lhmxr') no-repeat center center fixed;
       background-size: cover;
-      filter: contrast(.5)
+      filter: contrast(.7)
     }
     .contact-button {
       font-family: v.$brandon;
@@ -40,9 +40,6 @@
       padding: 3em;
       position: absolute;
     }
-  }
-  .cta * {
-    opacity: 1;
   }
   .about {
     height: 60vh;
@@ -88,7 +85,12 @@
     justify-content: space-around;
     align-items: center;
     height: 20vh;
+    line-height: 2em;
     background-color:v.$white;
+    @include m.mobile {
+      flex-direction: column;
+      height: 50vh;
+    }
     .stat {
       font-size: 28px;
       text-align: center;

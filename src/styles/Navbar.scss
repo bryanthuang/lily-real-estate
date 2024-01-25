@@ -75,12 +75,18 @@ body {
   background-size: cover;
   height: 60vh;
   background-position-y: -35vh;
+  @include m.mobile {
+    background-position-y: -20vh;
+  }
 }
 .header-testimonials {
   background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/a2du5a8knn9k8uqo8jom') no-repeat center center fixed;
   background-size: cover;
   height: 60vh;
   background-position-y: -22vh;
+  @include m.mobile {
+    background-position-x: right;
+  }
 }
 
 .header-privacypolicy {
@@ -88,6 +94,10 @@ body {
   background-size: cover;
   height: 60vh;
   background-position-y: -48vh;
+  @include m.mobile {
+    background-position-y: -35vh;
+    background-position-x: left;
+  }
 }
 video {
   width: 100vw;
@@ -148,6 +158,10 @@ video {
   .nav-elements ul a {
     color: v.$black;
     -webkit-text-stroke: 1px v.$black;
+    @include m.mobile {
+      color: white;
+      -webkit-text-stroke: 1px white;
+    }
   }
   .contact-info {
     span {
