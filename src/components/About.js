@@ -34,7 +34,7 @@ function About() {
               height="100%"
             />
           </div>
-          <Image className='image' src={lily} size='medium'/>
+          <Image className='image' title='portrait' alt='portrait' src={lily} size='medium'/>
           <Container>
             <p>
               <FadeInSection>
@@ -94,32 +94,32 @@ function About() {
             <Grid.Row centered  verticalAlign='middle'>
               <Grid.Column mobile={8} tablet={4} computer={2} textAlign='justified'>
                 <FadeInSection>
-                  <Image className='logo' alt='car' src={car} size='small' centered/>
+                  <Image className='logo' title='car' alt='car' src={car} size='small' centered/>
                 </FadeInSection>
               </Grid.Column>
               <Grid.Column mobile={8} tablet={4} computer={2}>
                 <FadeInSection>
-                  <Image className='logo' alt='sfar' src={sfar} size='small' centered/>
+                  <Image className='logo' title='sfar' alt='sfar' src={sfar} size='small' centered/>
                 </FadeInSection>
               </Grid.Column>
               <Grid.Column mobile={8} tablet={4} computer={2}>
                 <FadeInSection>
-                  <Image className='logo' alt='wcr' src={wcr} size='small' centered/>
+                  <Image className='logo' title='wcr' alt='wcr' src={wcr} size='small' centered/>
                 </FadeInSection>
               </Grid.Column>
               <Grid.Column mobile={8} tablet={4} computer={2}>
                 <FadeInSection>
-                  <Image className='logo' alt='nar' as=''src={nar} size='tiny' centered/>
+                  <Image className='logo' title='nar' alt='nar' as=''src={nar} size='tiny' centered/>
                 </FadeInSection>
               </Grid.Column>
               <Grid.Column mobile={8} tablet={4} computer={2}>
                 <FadeInSection>
-                  <Image className='logo' src={green} size='small' centered/>
+                  <Image className='logo' title='green' alt='green' src={green} size='small' centered/>
                 </FadeInSection>
               </Grid.Column>
               <Grid.Column mobile={8} tablet={4} computer={2}>
                 <FadeInSection>
-                  <Image className='logo' alt='rs' src={rs} size='small' centered/>
+                  <Image className='logo' title='rs' alt='rs' src={rs} size='small' centered/>
                 </FadeInSection>
               </Grid.Column>
             </Grid.Row>

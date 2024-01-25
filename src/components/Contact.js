@@ -20,7 +20,7 @@ function Contact() {
         </Grid.Row>
         <Grid.Column computer={4} mobile={12} tablet={4} verticalAlign='middle'>
           <FadeInSection>
-            <Image src={image} className='about-image' />
+            <Image loading='eager' title='portrait' alt='portrait' src={image} className='about-image' />
           </FadeInSection>
         </Grid.Column>
         <ContactForm />

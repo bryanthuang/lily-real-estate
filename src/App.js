@@ -25,7 +25,6 @@ function App() {
     <div className="app neue">
       <Helmet>
         <link rel='canonical' href='/' />
-
       </Helmet>
       <Navbar />
       <Routes>

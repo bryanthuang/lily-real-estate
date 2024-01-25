@@ -6,7 +6,6 @@ import { Grid, Image } from 'semantic-ui-react';
 import compass from '../assets/compassLogo-black.png';
 import nar from '../assets/nar-black.png';
 import eho from '../assets/eho.png'
-// import {links} from '../constants/constants'
 const Footer = () => {
   return (
 
@@ -14,11 +13,11 @@ const Footer = () => {
         <Grid.Row>
           <Grid.Column className='logos' verticalAlign='middle' padded computer={3} mobile={16} tablet={2}>
             <Grid.Row>
-              <img src={logo} className='logo-image' alt='logo' />
+              <img loading='eager' src={logo} className='logo-image' alt='logo' title='logo'/>
             </Grid.Row>
             <Grid.Row>
               <a href='https://www.compass.com/agents/lily-lai/' target='_blank' rel='noreferrer'>
-                <img className='compass-logo' src={compass} alt='compass-logo'></img>
+                <img loading='eager' className='compass-logo' title='compass-logo' src={compass} alt='compass-logo'></img>
               </a>
             </Grid.Row>
           </Grid.Column>
@@ -38,21 +37,21 @@ const Footer = () => {
           </Grid.Column> */}
           <Grid.Column className='icons' verticalAlign='bottom' computer={4} mobile={16} tablet={2}>
             <a href='https://bit.ly/433qBRc' target='_blank' rel='noreferrer'>
-              <img alt='instagram' src='https://img.icons8.com/sf-ultralight/100/instagram-new.png'/>
+              <img loading='eager' alt='instagram' title='instagram' src='https://img.icons8.com/sf-ultralight/100/instagram-new.png'/>
             </a>
             <a href='https://bit.ly/3MokJuE' target='_blank' rel='noreferrer'>
-              <img alt='facebook' src='https://img.icons8.com/sf-ultralight/100/facebook.png'/>
+              <img loading='eager' alt='facebook' title='facebook' src='https://img.icons8.com/sf-ultralight/100/facebook.png'/>
             </a>
             <a href='https://bit.ly/3BQ1dm3' target='_blank' rel='noreferrer'>
-              <img alt='linkedin' src='https://img.icons8.com/sf-ultralight/100/linkedin.png'/>
+              <img loading='eager' alt='linkedin' title='linkedin' src='https://img.icons8.com/sf-ultralight/100/linkedin.png'/>
             </a>
 
           </Grid.Column>
         </Grid.Row>
         <div className='disclaimer'>
           <div>
-            <Image alt='nar' src={nar} size='mini' wrapped/>
-            <Image alt='eho' src={eho} size='mini' wrapped/>
+            <Image loading='eager' title='nar' alt='nar' src={nar} size='mini' wrapped/>
+            <Image loading='eager' title='eho' alt='eho' src={eho} size='mini' wrapped/>
           </div>
           <div>
             <p>Copyright © 2024 Lily Lai Real Estate | All Rights Reserved  | <NavLink to='/privacypolicy'>Privacy Policy</NavLink></p>

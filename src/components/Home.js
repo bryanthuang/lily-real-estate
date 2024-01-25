@@ -45,7 +45,7 @@ function Home() {
           <Grid className='about'>
             <Grid.Column computer={4} mobile={12} tablet={4} verticalAlign='middle'>
               <FadeInSection>
-                <Image src={image} className='about-image' circular/>
+                <Image loading='eager' src={image} className='about-image' title='about-image' alt='lily-portrait' circular/>
               </FadeInSection>
             </Grid.Column>
             <Grid.Column computer={6} mobile={12} tablet={6} verticalAlign='middle'>
@@ -106,16 +106,16 @@ function Home() {
           </div>
           <div className='arches'>
             <FadeInSection>
-              <Image src={SF} className='icon' size='small' verticalAlign='bottom'/>
+              <Image loading='eager' src={SF} title='San Francisco' alt='San Francisco' className='icon' size='small' verticalAlign='bottom'/>
             </FadeInSection>
             <FadeInSection>
-              <Image src={SSF} className='icon' size='small' verticalAlign='bottom'/>
+              <Image loading='eager' src={SSF} alt='South San Francisco' title='South San Francisco'className='icon' size='small' verticalAlign='bottom'/>
             </FadeInSection>
             <FadeInSection>
-              <Image src={Pacifica} className='icon' size='small' verticalAlign='bottom'/>
+              <Image loading='eager' src={Pacifica} alt='Pacifica' title='Pacifica' className='icon' size='small' verticalAlign='bottom'/>
             </FadeInSection>
             <FadeInSection>
-              <Image src={Penninsula} className='icon' size='small' verticalAlign='bottom'/>
+              <Image loading='eager' src={Penninsula} alt='Penninsula' title='Penninsula' className='icon' size='small' verticalAlign='bottom'/>
             </FadeInSection>
           </div>
         </div>
