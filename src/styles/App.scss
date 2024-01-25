@@ -8,6 +8,25 @@
   font-family: 'Effra', sans-serif;
   src: url('../fonts/Effra\ Regular.ttf');
 }
+@font-face {
+  font-family: "Iskry Regular";
+  src: url("https://db.onlinewebfonts.com/t/c0c7e262b07e8f7d2bd87777a47e362f.eot");
+  src: url("https://db.onlinewebfonts.com/t/c0c7e262b07e8f7d2bd87777a47e362f.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/c0c7e262b07e8f7d2bd87777a47e362f.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/c0c7e262b07e8f7d2bd87777a47e362f.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/c0c7e262b07e8f7d2bd87777a47e362f.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/c0c7e262b07e8f7d2bd87777a47e362f.svg#Iskry Regular")format("svg");
+}
+
+@font-face {
+  font-family: "Neue Montreal Light";
+  src: url("https://db.onlinewebfonts.com/t/b2bf6541bf9ab3fc3138440f2bc8b592.eot");
+  src: url("https://db.onlinewebfonts.com/t/b2bf6541bf9ab3fc3138440f2bc8b592.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/b2bf6541bf9ab3fc3138440f2bc8b592.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/b2bf6541bf9ab3fc3138440f2bc8b592.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/b2bf6541bf9ab3fc3138440f2bc8b592.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/b2bf6541bf9ab3fc3138440f2bc8b592.svg#Neue Montreal Light")format("svg");
+}
 
 .brandon {
   font-family: v.$brandon;
@@ -15,11 +34,75 @@
 .effra {
   font-family: v.$effra;
 }
-
+.neue {
+  font-family: v.$neue;
+}
+.iskry {
+  font-family: v.$iskry;
+}
 body,html {
   margin: 0;
   padding: 0;
 }
 * {
   box-sizing: border-box;
+  font-family: v.$neue;
+  letter-spacing: 2px;
+}
+
+.header- {
+  height:100vh;
+}
+
+h1 {
+  font-family: v.$iskry !important;
+  letter-spacing: 2px;
+  font-size: 36px !important;
+}
+h2 {
+  font-family: v.$iskry !important;
+  letter-spacing: 2px;
+  font-size: 30px !important;
+}
+
+.link-underline {
+  font-size: 24px;
+  line-height: 1.25;
+  place-self: center;
+  text-decoration: none;
+  color: #eee;
+  position:relative;
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid;
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    transition: transform .6s;
+    transition-timing-function: cubic-bezier(.39,.575,.28,.995);
+  }
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: 0 0;
+    }
+  }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+  visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }

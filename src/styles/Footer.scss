@@ -1,0 +1,88 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.footer {
+  height: 40vh;
+  background-color: #EFEAE1;
+  margin-top: 0 !important;
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
+  @media (max-width: 1224px) {
+    height: 100vh;
+  }
+  .contact {
+    height: 30vh;
+    padding-top: 8.5rem !important;
+    .info {
+      font-size: 18px;
+      line-height: 32px;
+      letter-spacing: 2px;
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    .address {
+      margin-top: 20px;
+
+    }
+  }
+  .logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-top: 3.5rem !important;
+    @media (max-width: 768px) {
+      .compass-logo, .logo-image{
+        margin-left: 50px;
+      }
+    }
+    .compass-logo {
+      width: 150px;
+      margin-top: 20px;
+      margin-right: 35px;
+    }
+    .logo-image {
+      height: 200px;
+    }
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: black;
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    a {
+      margin: 30px 0;
+    }
+    img {
+      height: 40px;
+    }
+  }
+  .disclaimer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    p, a {
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+    @include m.mobile {
+      p, a {
+        font-size: 10px;
+      }
+    }
+    .image {
+      margin: 0 5px;
+    }
+  }
+}

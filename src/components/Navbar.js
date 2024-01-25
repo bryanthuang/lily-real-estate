@@ -1,114 +1,140 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom'
-const pages = [
-  {
-    name: 'About Me',
-    link: 'about'
-  }
-]
+import { BrowserRouter, NavLink, Link, Route, useLocation } from "react-router-dom";
+import {isMobile} from 'react-device-detect';
+import React, {Fragment, useState} from 'react';
+import logo from '../assets/RGB_LilyLaiLogo_White.png';
+import logoBlack from '../assets/RGB_LilyLaiLogo_Black.png'
+import '../styles/Navbar.scss';
+import hamburger from '../assets/hamburger.svg';
+import close from '../assets/close.svg';
+import { Icon, Divider} from "semantic-ui-react";
+import {useLockBodyScroll, useToggle} from 'react-use';
 
-function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
- 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+const Navbar = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [locked, setLocked] = useToggle(false)
+  useLockBodyScroll(locked)
+  const path = useLocation().pathname;
+  const location = path.split("/")[1].toLowerCase();
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+    isMobile ? setLocked(!locked) : setLocked(false)
   };
 
   return (
-    <AppBar position="static" color="transparent">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Lily Lai Real Estate
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center"><Link to={`${page.link}`}>{page.name}</Link></Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            <Link to='/'>Lily Lai Real Estate</Link>
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Link to={`${page.link}`}>{page.name}</Link>
-            ))}
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <nav className={`navbar header-${location}`}>
+      {location === '' && <video src='https://res.cloudinary.com/dlaituqwq/video/upload/f_auto:video,q_auto/nyqditwg1sqyqollk3if' autoPlay muted loop></video>}
+      <div className="logo">
+        {location !== 'about' && 
+          <NavLink to='/'>
+            <img src={logo} className='logo-image' alt="logo" />
+          </NavLink>
+        }
+        {location === 'about' && 
+          <NavLink to='/'>
+            <img src={logoBlack} className='logo-image' alt="logo" />
+          </NavLink>
+        }
+      </div>
+      <div className="container">
+        <div className="menu-icon" onClick={handleShowNavbar}>
+          <img src={!showNavbar ? hamburger : close } className='hamburger' alt="logo" />
+        </div>
+        <div className={`nav-elements  ${showNavbar && "active"}`}>
+          <ul>
+            { !isMobile && <Fragment>
+              <li>
+              {/* <NavLink to="/buyers" onClick={handleShowNavbar} className='link-underline'></NavLink> */}
+            </li>
+            <li>
+              {/* <NavLink to="/sellers" onClick={handleShowNavbar} className='link-underline'></NavLink> */}
+            </li>
+            <li>
+              {/* <NavLink to="/market-updates" onClick={handleShowNavbar} className='link-underline'></NavLink> */}
+            </li>
+              </Fragment>}
+            <li>
+              <NavLink to="/testimonials" onClick={handleShowNavbar} className='link-underline'>Testimonials</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" onClick={handleShowNavbar} className='link-underline'>About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" onClick={handleShowNavbar} className='link-underline'>Contact</NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className='contact-info'>
+          <Icon name='phone'/><span>415.728.2623 </span>
+          <Icon name='mail'/><span>lily@lilylaisf.com</span>
+        </div>
+      </div>
+      <div className='tagline'>
+        {location === '' && 'Your Success as Our Compass'}
+      </div>
+      {/* <div className="tagline">
+        {location === 'testimonials' && 'Testimonials'}
+        {location === 'contact' && 'Contact Me'}
+      </div> */}
+    </nav>
   );
-}
-export default Navbar;
+};
+
+export default Navbar
+// import * as React from 'react';
+// import AppBar from '@mui/material/AppBar';
+// import Box from '@mui/material/Box';
+// import Toolbar from '@mui/material/Toolbar';
+// import IconButton from '@mui/material/IconButton';
+// import Typography from '@mui/material/Typography';
+// import Menu from '@mui/material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import Container from '@mui/material/Container';
+// import MenuItem from '@mui/material/MenuItem';
+// import { Link } from 'react-router-dom'
+// import {pages} from '../constants/constants'
+// import { useLocation } from 'react-router-dom';
+
+// import '../styles/Navbar.scss'
+// function Navbar() {
+
+  // const path = useLocation().pathname;
+  // const location = path.split("/")[1];
+//   console.log(location)
+
+//   const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+//   const handleOpenNavMenu = (event) => {
+//     setAnchorElNav(event.currentTarget);
+//   };
+ 
+//   const handleCloseNavMenu = () => {
+//     setAnchorElNav(null);
+//   };
+
+//   return (
+//     <AppBar position="static" color="transparent" className={` navbar header-${location}`}>
+//       <Toolbar disableGutters>
+//         <div className="left-nav">
+//           {pages.left.map((page) => (
+//             <MenuItem key={page.name} onClick={handleCloseNavMenu} style={{ backgroundColor: 'transparent' }}>
+//               <Typography textAlign="center"><Link to={`${page.link}`} className='menu-item'>{page.name}</Link></Typography>
+//             </MenuItem>
+//           ))}
+//         </div>
+//       <Link to='/'>
+//           <img src={logo} className='logo' alt="logo" />
+//         </Link>
+//         <div className="right-nav">
+//           {pages.right.map((page) => (
+//             <MenuItem key={page.name} onClick={handleCloseNavMenu} style={{ backgroundColor: 'transparent' }}>
+//               <Typography textAlign="center"><Link to={`${page.link}`} className='menu-item'>{page.name}</Link></Typography>
+//             </MenuItem>
+//           ))}
+//         </div>
+//       </Toolbar>
+      
+      
+//     </AppBar>
+//   );
+// }
+// export default Navbar;

@@ -1,0 +1,91 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.testimonials {
+  margin-bottom: 5em;
+  h1 {
+    font-family: v.$iskry;
+  }
+  .title {
+    text-align: center;
+    padding: 1.5em 0;
+    
+  }
+  .testimonial-grid {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .testimonial {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 3px v.$black;
+    position: relative;
+    text-align: center;
+    p, b{
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+    b {
+      -webkit-text-stroke: 1px v.$gray;
+    }
+    @include m.mobile {
+      p,b {
+        font-size: 16px;
+      }
+    }
+    .name {
+      text-align: center;
+    }
+  }
+  .testimonial > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .fade-in-section:nth-child(1) {
+    transition-delay: 200ms;
+  }
+  .fade-in-section:nth-child(2) {
+    transition-delay: 400ms;
+  }
+  .fade-in-section:nth-child(3) {
+    transition-delay: 600ms;
+  }
+  .fade-in-section:nth-child(4) {
+    transition-delay: 200ms;
+  }
+  .fade-in-section:nth-child(5) {
+    transition-delay: 400ms;
+  }
+  .fade-in-section:nth-child(6) {
+    transition-delay: 600ms;
+  }
+  .fade-in-section:nth-child(7) {
+    transition-delay: 200ms;
+  }
+  .fade-in-section:nth-child(8) {
+    transition-delay: 400ms;
+  }
+  .fade-in-section:nth-child(9) {
+    transition-delay: 600ms;
+  }
+
+  @media (min-width: 768px) {
+    .testimonial-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .testimonial:first-of-type {
+      grid-column: span 2;
+    }
+
+    .testimonial:nth-of-type(7) {
+      grid-column: span 2;
+    }
+  }
+  @include m.mobile {
+    .testimonial-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
