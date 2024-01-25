@@ -16,14 +16,17 @@ import Communities from './components/Communities';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import {Cloudinary} from "@cloudinary/url-gen";
-
+import { Helmet } from 'react-helmet-async';
 import 'semantic-ui-css/semantic.min.css';
 
 function App() {
   const cld = new Cloudinary({cloud: {cloudName: 'dlaituqwq'}});
   return (
     <div className="app neue">
+      <Helmet>
+        <link rel='canonical' href='/' />
 
+      </Helmet>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
