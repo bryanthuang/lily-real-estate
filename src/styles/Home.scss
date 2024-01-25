@@ -42,14 +42,14 @@
     }
   }
   .about {
-    height: 60vh;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: v.$offwhite;
-
+    padding: 2em 0;
+    margin: 0 !important;
     @include m.mobile {
-      height: 100vh;
       flex-direction: column !important;
     }
     .about-image {
@@ -97,18 +97,19 @@
       p, span {
         font-family: v.$iskry;
       }
+      @include m.mobile {
+        font-size: 24px;
+      }
     }
   }
   .areas {
-    height: 45vh;
+    height: fit-content;
     background-color: v.$sage;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include m.mobile {
-      height: 60vh;
-    }
+    padding: 3em 0;
     .arches {
       display: flex;
       flex-direction: row;
@@ -218,106 +219,3 @@
     }
   }
 }
-// .home {
-//   @include m.flex-center;
-//   @include m.mobile {
-//     flex-direction: column;
-//   }
-//   .left-pane {
-//     @include m.mobile {
-//       width: 100vw;
-//     }
-//     width: 50vw;
-//     // height: calc(100vh - 64px);
-//     height: 100vh;
-//     @include m.flex-center;
-//     flex-direction: column;
-//     background-color: v.$black;
-//     color: v.$white;
-//     font-size: 1.25rem;
-//     a {
-//       color: v.$white;
-//     }
-//     a:link, a:hover, a:visited, a:active {
-//       text-decoration: none;
-//     }
-//     .coming-soon {
-//       color: v.$gray;
-//       letter-spacing: 10px;
-//       font-size: 1.25rem;
-//       padding-bottom: 150px;
-//       @include m.mobile {
-//         padding-bottom: 0;
-//       }
-//     }
-//     .icon-list {
-//       display:flex;
-//       justify-content: space-around;
-//       svg {
-//         color: v.$gray;
-//         padding: 0 10px;
-//         width: 50px;
-//         height: 50px;
-//       }
-//     }
-//     .compass-logo {
-//       height: 25px;
-//       margin-top: 75px;
-//     }
-//     .logo {
-//       height: 250px;
-//       margin-left: 70px;
-//       margin-bottom: 75px;
-//       @include m.mobile {
-//         height: 150px;
-//         margin: 30px 0 30px 40px;
-//       }
-//     }
-//     .middle-section {
-//       @include m.flex-center;
-//       flex-direction: column;
-//       p {
-//         letter-spacing: 5px;
-//         margin-bottom: 0px;
-//         color: v.$gray;
-//       }
-//       .name {
-//         font-size: 1.75rem;
-//       }
-//       .realtor {
-//         font-size: 1.25rem;
-//       }
-//     }
-//     .info-section {
-//       @include m.flex-center;
-//       flex-direction: column;
-//       margin-top: 150px;
-//       @include m.mobile {
-//         margin-top: 90px;
-//       }
-//       p,a {
-//         font-family: v.$effra;
-//         margin: 5px;
-//         color: v.$gray;
-//       }
-//     }
-//   }
-//   .right-pane {
-//     @include m.mobile {
-//       width: 100vw;
-//       img {
-//         object-fit:contain;
-//         object-position:center;
-//         width: 100vw;
-//         height: 100vh;
-//       }
-//     }
-//     width: 50vw;
-//     // height: calc(100vh - 64px);
-//     height: 100vh;
-//     img {
-//       height: 100vh;
-//     }
-//     background-color: v.$black;
-//   }
-// }
