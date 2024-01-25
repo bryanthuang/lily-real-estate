@@ -25,43 +25,6 @@ function Home() {
         <link rel='cononical' href='/'/>
       </Helmet>
       <div className='home'>
-        {/* section CTA */}
-        <div className='cta'>
-          <div className='background'>
-          </div>
-          <div className='text'>
-            <h2>
-              We’re Curious To Hear Your Story
-            </h2>
-            <p className='subtext'>
-              Let’s schedule a time to connect, to see how we can play a part. 
-            </p>
-            <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
-          </div>
-
-        </div>
-        {/* section About Me */}
-        <div>
-          <Grid className='about'>
-            <Grid.Column computer={4} mobile={12} tablet={4} verticalAlign='middle'>
-              <FadeInSection>
-                <Image loading='eager' src={image} className='about-image' title='about-image' alt='lily-portrait' circular/>
-              </FadeInSection>
-            </Grid.Column>
-            <Grid.Column computer={6} mobile={12} tablet={6} verticalAlign='middle'>
-              <FadeInSection>
-                <Container className='about-text'>
-                  <p>
-                    I am a passionate Bay Area Realtor with expertise in home renovations, empowering clients with winning personalized strategies created from intimate market knowledge.
-                  </p>
-                <NavLink className='about-link link-underline' to="/about">More About Me→</NavLink>
-                </Container>
-              </FadeInSection>
-
-            </Grid.Column>
-          </Grid>
-          </div>
-        {/* section Testimonials */}
         <div className='stats'>
           <div className='stat'>
             <CountUp
@@ -100,6 +63,43 @@ function Home() {
             <p>Clients Helped</p>
           </div>
         </div>
+        {/* section CTA */}
+        <div className='cta'>
+          <div className='background'>
+          </div>
+          <div className='text'>
+            <h2>
+              We’re Curious To Hear Your Story
+            </h2>
+            <p className='subtext'>
+              Let’s schedule a time to connect, to see how we can play a part. 
+            </p>
+            <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
+          </div>
+
+        </div>
+        {/* section About Me */}
+        <div>
+          <Grid className='about'>
+            <Grid.Column computer={4} mobile={12} tablet={4} verticalAlign='middle'>
+              <FadeInSection>
+                <Image loading='eager' src={image} className='about-image' title='about-image' alt='lily-portrait' circular/>
+              </FadeInSection>
+            </Grid.Column>
+            <Grid.Column computer={6} mobile={12} tablet={6} verticalAlign='middle'>
+              <FadeInSection>
+                <Container className='about-text'>
+                  <p>
+                    I am a passionate Bay Area Realtor with expertise in home renovations, empowering clients with winning personalized strategies created from intimate market knowledge.
+                  </p>
+                <NavLink className='about-link link-underline' to="/about">More About Me→</NavLink>
+                </Container>
+              </FadeInSection>
+
+            </Grid.Column>
+          </Grid>
+          </div>
+        {/* section Testimonials */}
         <div className='areas'>
           <div className='title'>
             Areas Serviced

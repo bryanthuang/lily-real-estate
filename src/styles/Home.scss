@@ -86,7 +86,7 @@
     align-items: center;
     height: 20vh;
     line-height: 2em;
-    background-color:v.$white;
+    background-color: #EFEAE1;
     @include m.mobile {
       flex-direction: column;
       height: 50vh;
@@ -152,7 +152,7 @@
     transition-delay: 600ms;
   }
   .testimonials {
-    height: 60vh;
+    height: fit-content;
     display:flex;
     justify-content: center;
     align-items: center;

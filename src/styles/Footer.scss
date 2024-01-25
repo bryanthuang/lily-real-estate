@@ -2,7 +2,7 @@
 @use 'mixins' as m;
 
 .footer {
-  height: 40vh;
+  height: fit-content;
   background-color: #EFEAE1;
   margin-top: 0 !important;
   @media (max-width: 768px) {
