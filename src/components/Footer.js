@@ -6,9 +6,10 @@ import { Grid, Image } from 'semantic-ui-react';
 import compass from '../assets/compassLogo-black.png';
 import nar from '../assets/nar-black.png';
 import eho from '../assets/eho.png'
+import { isMobile } from 'react-device-detect';
+
 const Footer = () => {
   return (
-
       <Grid relaxed columns={3} centered className='footer'>
         <Grid.Row>
           <Grid.Column className='logos' verticalAlign='middle' padded computer={3} mobile={16} tablet={2}>
@@ -53,10 +54,15 @@ const Footer = () => {
             <Image loading='eager' title='nar' alt='nar' src={nar} size='mini' wrapped/>
             <Image loading='eager' title='eho' alt='eho' src={eho} size='mini' wrapped/>
           </div>
-          <div>
-            <p>Copyright © 2024 Lily Lai Real Estate</p>
-            <p>All Rights Reserved  | <NavLink to='/privacypolicy'>Privacy Policy</NavLink></p>
-          </div>
+          {isMobile ? 
+            <div>
+              <p>Copyright © 2024 Lily Lai Real Estate</p>
+              <p>All Rights Reserved  | <NavLink to='/privacypolicy'>Privacy Policy</NavLink></p>
+            </div>
+            : <div>
+                <p>Copyright © 2024 Lily Lai Real Estate | All Rights Reserved  | <NavLink to='/privacypolicy'>Privacy Policy</NavLink></p>
+              </div>
+          } 
         </div>
       </Grid>
   );
