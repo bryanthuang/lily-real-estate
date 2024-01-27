@@ -39,6 +39,9 @@
       background-color: rgba(250, 249, 246, .4);
       padding: 3em;
       position: absolute;
+      @include m.mobile {
+        width: 80%;
+      }
     }
   }
   .about {
@@ -55,7 +58,7 @@
     .about-image {
       padding: 60px;
       @include m.mobile {
-        padding: 0;
+        padding: 2em 0;
       }
     }
     .about-text {
@@ -89,16 +92,17 @@
     background-color: #EFEAE1;
     @include m.mobile {
       flex-direction: column;
-      height: 50vh;
+      height: fit-content;
     }
     .stat {
       font-size: 28px;
       text-align: center;
-      p, span {
-        font-family: v.$iskry;
-      }
+      margin: 1em 0;
       @include m.mobile {
         font-size: 24px;
+      }
+      p, span {
+        font-family: v.$iskry;
       }
     }
   }
@@ -131,12 +135,12 @@
     .icon {
       margin: 0 4em;
       @include m.mobile {
-        padding: 3em 0;
+        padding: 2em 0;
       }
     }
     img {
       @include m.mobile {
-        width: 100px !important;
+        width: 80px !important;
       }
     }
   }

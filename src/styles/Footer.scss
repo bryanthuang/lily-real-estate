@@ -77,8 +77,9 @@
       letter-spacing: 2px;
     }
     @include m.mobile {
-      p, a {
-        font-size: 10px;
+      p:first-child {
+        margin-top: 1em;
+        margin-bottom: 0;
       }
     }
     .image {

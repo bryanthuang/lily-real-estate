@@ -34,15 +34,6 @@ body {
   position: relative;
 }
 
-.tagline {
-  font-family: v.$iskry;
-  color: v.$white;
-  position: relative;
-  font-size: 50px;
-  top: 25%;
-  width: 100vw;
-  text-align: center;
-}
 .header-about {
   background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/xmctef45wz3wwv1bxvwb') no-repeat center center fixed;
   background-size: cover;
@@ -245,13 +236,18 @@ video {
   }
 
   .tagline {
-    transform: translateX(6%);
-    font-size: 50px !important;
+    font-size: 50px;
     font-family: v.$iskry !important;
+    color: v.$white;
+    position: relative;
+    font-size: 50px;
+    top: 25%;
+    text-align: center;
     @include m.mobile {
-      font-size: 30px !important;
+      font-size: 30px;
       top: 40%;
       line-height: 1em;
+      margin-left: 2em;
     }
   }
 }
