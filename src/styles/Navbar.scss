@@ -235,19 +235,19 @@ video {
     color: v.$white;
   }
 
-  .tagline {
-    font-size: 50px;
-    font-family: v.$iskry !important;
-    color: v.$white;
-    position: relative;
-    font-size: 50px;
-    top: 25%;
-    text-align: center;
-    @include m.mobile {
-      font-size: 30px;
-      top: 40%;
-      line-height: 1em;
-      margin-left: 2em;
-    }
+}
+.tagline {
+  font-size: 50px;
+  font-family: v.$iskry !important;
+  color: v.$white;
+  position: relative;
+  font-size: 50px;
+  top: 25%;
+  text-align: center;
+  @include m.mobile {
+    font-size: 30px;
+    top: 40%;
+    line-height: 1em;
+    margin-left: 2em;
   }
 }
