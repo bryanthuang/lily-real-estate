@@ -42,6 +42,7 @@
     .affiliation-logos {
       padding: 2em 0 !important;
       @include m.mobile {
+        margin-bottom: 2em;
         .column {
           margin: 2em 0 !important;
         }
