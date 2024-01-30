@@ -13,10 +13,13 @@
     .background {
       width: 100vw;
       height: 100%;
-      background-color: v.$oatmeal;
       background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/wr8plprsi0qxxs3lhmxr') no-repeat center center fixed;
       background-size: cover;
-      filter: contrast(.7)
+      filter: contrast(.7);
+      @include m.mobile {
+        background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/eq7tqyrzgw3t4iymip9t') no-repeat;
+        background-size: cover;
+      }
     }
     .contact-button {
       font-family: v.$brandon;

@@ -11,6 +11,11 @@
     margin: 1.5em 0 !important;
   }
   @include m.mobile {
-    // height: unset;
+    margin: 0  !important;
+  }
+  .contact-form {
+    @include m.mobile {
+      margin: 0  !important;
+    }
   }
 }

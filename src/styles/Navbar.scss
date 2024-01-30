@@ -36,10 +36,12 @@ body {
 
 .header-about {
   background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/xmctef45wz3wwv1bxvwb') no-repeat center center fixed;
-  background-size: cover;
   height: 60vh;
   background-position-y: -35vh;
-  
+  @include m.mobile {
+    background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/yz6pipqxy2fjdirk9cas') no-repeat;
+    background-size: cover;
+  }
 }
 .header-blog {
   // background: url('../assets/interior.jpg') no-repeat center center fixed;
@@ -67,7 +69,8 @@ body {
   height: 60vh;
   background-position-y: -35vh;
   @include m.mobile {
-    background-position-y: -20vh;
+    background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/o8gznkodymkwuopj0rma') no-repeat;
+    background-size: cover;
   }
 }
 .header-testimonials {
@@ -76,7 +79,8 @@ body {
   height: 60vh;
   background-position-y: -22vh;
   @include m.mobile {
-    background-position-x: right;
+    background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/lwy1vz3voup9livrfs7q') no-repeat;
+    background-size: cover;
   }
 }
 
@@ -86,8 +90,8 @@ body {
   height: 60vh;
   background-position-y: -48vh;
   @include m.mobile {
-    background-position-y: -35vh;
-    background-position-x: left;
+    background: url('https://res.cloudinary.com/dlaituqwq/image/upload/f_auto,q_auto/j3dcpizrjtuqs7jwxjdt') no-repeat;
+    background-size: cover;
   }
 }
 video {

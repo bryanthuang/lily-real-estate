@@ -66,6 +66,9 @@
     img {
       height: 40px;
     }
+    @include m.mobile {
+      margin-top: 2em !important;
+    }
   }
   .disclaimer {
     display: flex;
